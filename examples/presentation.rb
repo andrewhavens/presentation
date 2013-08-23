@@ -14,7 +14,7 @@ slide {
 
 slide {
   title 'What does Ruby look like?'
-  ruby_code "Use up/down arrow keys to scroll\n\n" + File.read(__FILE__)
+  ruby_code "# Use up/down arrow keys to scroll\n" + File.read(__FILE__)
 }
 
 slide {

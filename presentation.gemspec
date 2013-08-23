@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "presentation"
-  spec.version       = "0.0.1"
+  spec.version       = "0.1.0"
   spec.authors       = ["Andrew Havens"]
   spec.email         = ["email@andrewhavens.com"]
   spec.description   = %q{Create fullscreen presentations using Ruby.}
@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "thor"
   spec.add_dependency "gosu"
+  spec.add_dependency "coderay"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
