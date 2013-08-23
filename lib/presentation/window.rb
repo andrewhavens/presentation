@@ -13,12 +13,14 @@ class Presentation
         @slide_deck.next_slide
       when Gosu::KbLeft
         @slide_deck.previous_slide
+      else
+        # @slide_deck.current_slide.button_down
       end
     end
 
     def update
-      @slide_deck.current_slide.scroll_up if button_down? Gosu::KbUp
-      @slide_deck.current_slide.scroll_down if button_down? Gosu::KbDown
+      @slide_deck.current_slide.scroll_up if button_down? Gosu::KbDown
+      @slide_deck.current_slide.scroll_down if button_down? Gosu::KbUp
     end
     
     def draw
