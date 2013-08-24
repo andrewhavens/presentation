@@ -44,12 +44,12 @@ class Presentation
       options = {}
       options[:line_numbers] = :inline if line_numbers
       html = CodeRay.scan(text, language).span(options)
-      # puts "Before:\n" + html
+
       # remove unsupported properties
       html.gsub! '<span class="CodeRay">', ''
-      html.gsub! /<\/span>\z/, ''
+      html.gsub! /<\/span>\z/, '' # closing .CodeRay tag
       html.gsub! /font-weight:bold/, ''
-      
+
       # convert inline styles to Gosu compatible color tags
       html.gsub! /<span style="background-color:hsla.*?">/, '<c=FFFFFF>'
       html.gsub! /<span class="line-numbers">(?<space> )?(<strong>)?<a href="#n\d+?" name="n\d+?">(?<number>\d+?)<\/a>(<\/strong>)?(<\/span>)?/, '\k<space>\k<number> '
@@ -59,7 +59,6 @@ class Presentation
       end
       html.gsub! '</span>', '</c>'
       html.gsub! '&quot;', '"'
-      # puts "After:\n" + html
 
       slide.code = html
     end
