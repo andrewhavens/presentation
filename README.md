@@ -14,4 +14,4 @@ Presentation is a Ruby library for creating fullscreen presentations.
 
 ## Contributing
 
-Pull requests are welcome! Feel free to submit an an issue if you have any suggestions for improvement.
+Pull requests are welcome! Feel free to submit an issue if you have any suggestions for improvement.
